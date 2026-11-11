@@ -1,0 +1,1112 @@
+import {
+  Building2,
+  Factory,
+  Fan,
+  FlaskConical,
+  HeartPulse,
+  ShieldCheck,
+  Snowflake,
+  Sparkles,
+  Wind,
+  Wrench,
+  Layers,
+  ThermometerSnowflake,
+  Activity,
+  Cpu
+} from 'lucide-react'
+
+export const productCategories = [
+  'All',
+  'Air Handling Units (AHU)',
+  'Clean Room Partitions',
+  'Clean Room Doors',
+  'Cleanroom Equipment',
+  'Cooling Coils & Air Washers',
+  'Industrial Chillers & VRV',
+  'Modular Operation Theater',
+  'Laboratory Furniture & Hoods',
+  'Turnkey HVAC Services'
+]
+
+export const productDescriptions = {
+  'Air Handling Units (AHU)': 'Custom-engineered single & double-skin AHUs with extruded thermal-break aluminium profiles, DIDW/Plug fans, and multi-stage filtration (1,000–50,000 CFM).',
+  'Clean Room Partitions': 'Pre-fabricated modular wall panels, walk-on ceilings, and flush view panels compliant with WHO cGMP and USFDA Class 100 to 100,000 standards.',
+  'Clean Room Doors': 'Hermetically sealed, GI powder-coated and SS 304 cleanroom doors with double glass flush vision panels, drop seals, and fire exit options.',
+  'Cleanroom Equipment': 'Advanced contamination control units including air showers, dynamic & static pass boxes, laminar airflow units, and sampling/dispensing booths.',
+  'Cooling Coils & Air Washers': 'DX and chilled water cooling coils with copper tube & aluminium fins, plus single & double skin industrial air washers.',
+  'Industrial Chillers & VRV': 'High-efficiency air-cooled & water-cooled screw/scroll chillers and authorized Daikin VRV/VRF systems for precision temperature control.',
+  'Modular Operation Theater': 'Specialized modular operation theatre suites, microprocessor surgeon control panels, and laminar airflow ceiling plenums.',
+  'Laboratory Furniture & Hoods': 'Heavy-duty modular laboratory workbenches, aerodynamic fume exhaust hoods, and bio-safety cabinets engineered for safety and durability.',
+  'Turnkey HVAC Services': 'Turnkey design-to-validation services for pharmaceutical, hospital, and cleanroom facilities including DQ/IQ/OQ validation.'
+}
+
+export const productData = [
+  // ==========================================
+  // 1. AIR HANDLING UNITS (AHU)
+  // ==========================================
+  {
+    id: 'double-skin-ahu',
+    name: 'Double Skin Air Handling Unit (AHU)',
+    cat: 'Air Handling Units (AHU)',
+    spec: '1,000 to 50,000 CFM • 25mm / 50mm PUF',
+    img: '/images/pharma-lab.png',
+    icon: Fan,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Airflow Range': '1,000 to 50,000 CFM',
+      'Panel Thickness': '25mm / 43mm / 50mm PUF Injected',
+      'Frame Profile': 'Thermal Break Extruded Aluminium',
+      'Blower Type': 'DIDW / Backward Curved / EC Plug Fan',
+      'Filtration': 'Pre-Filter (G4 10μ) + Fine (F9 5μ) + Terminal HEPA (H14)',
+      'Country of Origin': 'Made in India (Vadodara, Gujarat)'
+    },
+    description: 'Encore Double Skin Air Handling Units are manufactured with hollow thermal-break aluminium profiles and injected PUF insulation (40 kg/m³) to eliminate thermal bridging, condensation, and air leakage. Ideal for pharmaceutical cleanrooms and critical care environments.',
+    features: [
+      'Extruded thermal-break aluminium profile with injected PUF insulation (40 kg/m³)',
+      'DIDW forward/backward curved or high-efficiency plug fan with IE3/IE4 motors',
+      'Multi-stage filtration: Pre-filter (G4 10μ), Microvee (F7/F9 5μ), and optional terminal HEPA (H14 0.3μ)',
+      'Direct expansion (DX) or chilled water cooling coils with copper tube & aluminium blue fins',
+      'Acoustically insulated double skin construction for ultra-low vibration and noise'
+    ],
+    application: 'Pharmaceutical cleanrooms, hospital operation theatres, semiconductor fabrication, and commercial complexes.'
+  },
+  {
+    id: 'single-skin-ahu',
+    name: 'Single Skin Air Handling Unit',
+    cat: 'Air Handling Units (AHU)',
+    spec: '1,000 to 40,000 CFM • Floor Mounted',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/361813483/IB/AN/XD/43788119/single-skin-air-handling-unit-500x500.jpg',
+    icon: Fan,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Material': 'Galvanised Steel / Mild Steel (GI / MS)',
+      'Airflow Capacity': '1,000 to 40,000 CFM',
+      'Mounting': 'Floor Mounted / Skid Base',
+      'Voltage / Phase': '415 V / 3 Phase / 50 Hz',
+      'Cooling Coil': 'Copper Tube with Aluminium Fins',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Single Skin Air Handling Units provide cost-effective air distribution, ventilation, and cooling for commercial spaces, workshops, and general industrial process areas. Engineered for heavy continuous duty with easy filter access.',
+    features: [
+      'Heavy gauge galvanized sheet steel construction with anti-corrosive primer',
+      'High-velocity cooling coils with low air pressure drop',
+      'Compact footprint designed for commercial ventilation & industrial comfort cooling',
+      'Easy access service doors for maintenance and filter change'
+    ],
+    application: 'Industrial manufacturing plants, commercial buildings, banquet halls, and warehouses.'
+  },
+  {
+    id: 'ceiling-suspended-ahu',
+    name: 'Ceiling Suspended AHU (CSU)',
+    cat: 'Air Handling Units (AHU)',
+    spec: '1,000 to 10,000 CFM • Low Height Design',
+    img: '/images/ductable-indoor.png',
+    icon: Fan,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '1,000 to 10,000 CFM',
+      'Mounting': 'Ceiling Suspended / False Ceiling Concealed',
+      'Construction': 'Double Skin PUF Insulated (25mm)',
+      'Noise Level': '<52 dBA low acoustic signature',
+      'Drain Pan': 'Stainless Steel SS 304 with slope',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Designed specifically for spaces where plant room floor space is limited. Mounts seamlessly inside false ceilings, providing filtered and conditioned air with whisper-quiet indoor operation.',
+    features: [
+      'Compact low-height profile designed for false ceiling mounting',
+      'Acoustically lined double skin panels for ultra-quiet indoor operation',
+      'High static blower with direct drive or belt drive motor',
+      'Integrated drain pan with condensation protection'
+    ],
+    application: 'Pharma corridors, clean laboratories, office floors, and areas with limited plant room space.'
+  },
+  {
+    id: 'industrial-air-conditioner',
+    name: 'Industrial Air Conditioner System',
+    cat: 'Air Handling Units (AHU)',
+    spec: '5 to 60 TR • Heavy Duty Industrial Package',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/362221834/FN/FG/SJ/43788119/industrial-air-conditioner-system-500x500.jpeg',
+    icon: Snowflake,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Cooling Capacity': '5 TR to 60 TR',
+      'Material': 'Galvanised Steel / Powder Coated',
+      'Refrigerant': 'R410A / R134a Eco-friendly',
+      'Air Flow': '2,000 to 24,000 CFM',
+      'Compressor': 'Hermetic Scroll / Semi-Hermetic Screw',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'High-capacity industrial ducted air conditioning system designed for rigorous ambient environments up to 50°C. Delivers continuous conditioned air to large factory halls, packing lines, and control centers.',
+    features: [
+      'Heavy-duty weatherproof casing for outdoor and plant room mounting',
+      'High external static pressure fan for long duct distribution runs',
+      'Microprocessor controller with automatic capacity staging and protection',
+      'Multi-stage filtration with quick washable pre-filters'
+    ],
+    application: 'Industrial manufacturing units, pharma packaging lines, electrical control rooms, and engineering facilities.'
+  },
+  {
+    id: 'air-treatment-unit',
+    name: 'Air Treatment & Dehumidification Unit',
+    cat: 'Air Handling Units (AHU)',
+    spec: 'Custom CFM • Desiccant / Condensing',
+    img: '/images/pharma-lab.png',
+    icon: ThermometerSnowflake,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Moisture Removal': 'Down to <10% Relative Humidity (RH)',
+      'Rotor Type': 'Honeycombed Silica Gel Desiccant Rotor',
+      'Filtration': 'Pre-filter + Microvee + Chemical Filter',
+      'Heater': 'Electric Thyristor / Steam Reactivation',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Air treatment and deep dehumidification units engineered for processes requiring precise relative humidity control, preventing moisture-induced product degradation in effervescent tablet and chemical synthesis.',
+    features: [
+      'Solid desiccant rotor for deep humidity control down to <10% RH',
+      'Face and bypass dampers for precise sensible and latent heat balance',
+      'Integrated thyristor-controlled reactivation heaters for energy saving',
+      'Microprocessor controller with real-time temperature and RH display'
+    ],
+    application: 'Effervescent tablet manufacturing, gelatin capsule drying, dry rooms for lithium batteries.'
+  },
+
+  // ==========================================
+  // 2. CLEAN ROOM PARTITIONS
+  // ==========================================
+  {
+    id: 'modular-cleanroom-panel',
+    name: 'Modular Clean Room Partition',
+    cat: 'Clean Room Partitions',
+    spec: '50mm / 80mm / 100mm • PUF / PIR / Rockwool',
+    img: '/images/modular-cleanroom.png',
+    icon: Building2,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Panel Thickness': '50 mm, 80 mm, 100 mm',
+      'Outer Skin': 'Pre-Painted Galvanized Iron (PPGI 0.6mm / 0.8mm) or SS 304',
+      'Insulation Core': 'Rigid Polyurethane Foam (PUF 40 kg/m³) / PIR / Rockwool',
+      'Joint Type': 'Tongue & Groove Cam-Lock System',
+      'Surface Finish': 'Antibacterial Pure White Powder Coated',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Encore modular cleanroom partition panels are engineered for pharmaceutical, electronic, and biotechnology facilities. Completely flush on both sides with silicone-sealed joints to eliminate particle entrapment and withstand intensive cleaning.',
+    features: [
+      'Pre-painted galvanized iron (PPGI) or SS 304 skin on both sides (0.6mm / 0.8mm)',
+      'High-density PUF (40±2 kg/m³) or fire-retardant Rockwool (96-120 kg/m³) core',
+      'Tongue and groove cam-lock connection for seamless, silicone-sealed flush joints',
+      'Factory cut-outs for return air risers, view panels, doors, and electrical conduits'
+    ],
+    application: 'Pharma Class 100 to 100,000, Biotech research centers, Food processing, and Electronics assembly.'
+  },
+  {
+    id: 'clean-room-partition-pharma',
+    name: 'Clean Room Partition for Pharma',
+    cat: 'Clean Room Partitions',
+    spec: 'WHO cGMP & USFDA Compliant • Flush Finish',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/357933206/EF/DY/OW/43788119/clean-room-partition-for-pharma-500x500.jpeg',
+    icon: Building2,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Compliance': 'USFDA, WHO cGMP, ISO 14644-1',
+      'Thickness': '50mm / 80mm',
+      'Core Density': '40 kg/m³ CFC-free PUF',
+      'Fire Rating': 'Class 1 / Class 0 Fire Retardant',
+      'Cleaning Resistance': 'Resistant to H2O2 fumigation & chlorine wipes',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Specifically designed for GMP-regulated pharmaceutical formulation, sterile filling suites, and API cleanrooms. Features smooth, non-shedding, chemical-resistant skin that prevents microbial adherence.',
+    features: [
+      'Formulated with non-porous antibacterial coatings resistant to formaldehyde and VHP fumigation',
+      'Seamless integration with flush aluminium covings (R50/R65)',
+      'Concealed internal PVC raceways for electrical wiring and instrumentation',
+      'Heavy structural stability with reinforced framework for ceiling load bearing'
+    ],
+    application: 'Aseptic filling corridors, formulation suites, oral solid dosage (OSD) manufacturing.'
+  },
+  {
+    id: 'clean-room-view-panel',
+    name: 'Clean Room Flush View Panel',
+    cat: 'Clean Room Partitions',
+    spec: 'Double Glazed 5mm/6mm Toughened Glass • Desiccant Filled',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/361018922/HN/GV/DI/43788119/clean-room-view-panel-500x500.jpg',
+    icon: Building2,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Glass Type': '5mm / 6mm Toughened Safety Glass (Double Glazed)',
+      'Dimensions': 'Custom (e.g. 1000 x 1000 mm, 1200 x 1500 mm)',
+      'Profile': 'Flush on both sides with 50mm/80mm partition',
+      'Desiccant': 'Silica Gel filled aluminium spacer bar',
+      'Sealant': 'Anti-fungal neutral silicone sealant',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Double-glazed cleanroom observation windows that fit completely flush with modular partition walls. Built with an aluminium desiccant spacer that absorbs moisture and prevents internal condensation and fogging.',
+    features: [
+      'Completely flush on both sides with modular cleanroom wall panels (50mm / 80mm)',
+      'Double toughened glass with silica gel desiccant inside aluminium spacer to prevent misting',
+      'Hermetically sealed with UV-resistant silicone for zero particle accumulation',
+      'Available with motorized blinds or tinted solar glass options'
+    ],
+    application: 'Supervisory observation corridors, cleanroom airlocks, and laboratory partition walls.'
+  },
+  {
+    id: 'walk-on-ceiling-panel',
+    name: 'PPGI Walk-on Cleanroom Ceiling System',
+    cat: 'Clean Room Partitions',
+    spec: 'Load Bearing 150 kg/m² • 50/80mm Thick',
+    img: '/images/cleanroom-room.png',
+    icon: Layers,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Load Capacity': '150 kg/m² walk-on point load',
+      'Panel Thickness': '50 mm / 80 mm PUF Core',
+      'Outer Sheet': '0.6mm PPGI / SS 304 Skin',
+      'Suspension': 'M10 Threaded Rod with extruded aluminium grid',
+      'Cutouts': 'Factory finished for FFUs and flush cleanroom lights',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Walkable modular cleanroom ceiling system allowing plant maintenance personnel to inspect plenum ductwork, HEPA filter housings, and cable trays from above without disturbing sterile cleanroom production beneath.',
+    features: [
+      'Heavy-duty walkable design allowing maintenance personnel easy access to plenums & ducting',
+      'Threaded rod suspension system with aluminium extruded perimeter grid',
+      'Flush integrated cutouts for HEPA filter fan units (FFUs) and cleanroom lighting',
+      'Smooth non-shedding antibacterial surface resistant to routine cleaning and fumigation chemicals'
+    ],
+    application: 'Pharma manufacturing suites, aseptic processing corridors, and high-spec cleanrooms.'
+  },
+  {
+    id: 'clean-room-chamber',
+    name: 'Clean Room Enclosure / Chamber',
+    cat: 'Clean Room Partitions',
+    spec: 'Panel Thickness 50–100mm • Modular Pod',
+    img: 'https://5.imimg.com/data5/SELLER/PDFImage/2024/10/456640545/DM/AY/PP/43788119/clean-room-chamber-500x500.png',
+    icon: Building2,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Construction': 'Freestanding Modular Cleanroom Pod',
+      'Cleanliness Class': 'ISO 5 to ISO 8',
+      'Wall Material': 'PUF / PIR Insulated Sandwich Panels',
+      'HVAC Integration': 'Built-in Mini AHU or Fan Filter Units (FFU)',
+      'Lighting': 'Flush Cleanroom LED Light Fixtures',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Self-contained modular cleanroom chamber that can be rapidly erected inside an existing warehouse or factory floor to create an immediate sterile or dust-free testing and packaging cell.',
+    features: [
+      'Modular pre-fabricated design with quick bolt-together erection',
+      'Autonomous climate and particulate control without altering building structure',
+      'Easily expandable, relocatable, and configurable with airlock entry',
+      'Full DOP aerosol leak test and particle count certificate provided'
+    ],
+    application: 'Medical device packaging, precision optics assembly, satellite components, pilot pharma testing.'
+  },
+
+  // ==========================================
+  // 3. CLEAN ROOM DOORS
+  // ==========================================
+  {
+    id: 'cleanroom-single-door',
+    name: 'Clean Room Single Leaf Door',
+    cat: 'Clean Room Doors',
+    spec: '46mm Thick • GI Powder Coated / SS 304',
+    img: '/images/cleanroom-door.png',
+    icon: ShieldCheck,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Leaf Thickness': '46 mm',
+      'Material': 'GI 0.8mm Powder Coated or SS 304 Satin Finish',
+      'Infill Core': 'High-Density Injected PUF (45 kg/m³) / Honeycomb',
+      'Vision Glass': 'Double glazed flush glass with silica desiccant',
+      'Bottom Seal': 'Automatic mechanical drop-down neoprene seal',
+      'Hardware': 'SS 304 hinges, mortise lever lock, door closer',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Encore Clean Room Single Doors are flush on both faces with modular wall panels. Built with heavy-duty perimeter silicone gaskets and an automatic drop seal to ensure airtight positive pressure retention.',
+    features: [
+      'Galvanized steel (0.8mm) or SS 304 skin with injected rigid PUF core',
+      'Double glazed flush view glass with silicone seal and desiccant',
+      'Drop-down automatic mechanical neoprene bottom seal for air tightness',
+      'Stainless steel 304 hinges, mortise lever lockset, and heavy-duty concealed door closer'
+    ],
+    application: 'Personnel access in pharmaceutical labs, healthcare facilities, and electronic manufacturing.'
+  },
+  {
+    id: 'cleanroom-double-door',
+    name: 'Modular Clean Room Double Door',
+    cat: 'Clean Room Doors',
+    spec: 'Width 1500–2200mm • GI / SS 304 Material Airlock',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/357966670/KN/KH/EM/43788119/modular-clean-room-door-500x500.jpeg',
+    icon: ShieldCheck,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Clear Opening': '1500 x 2100 mm to 2200 x 2400 mm',
+      'Door Construction': 'Double leaf with center rebate & meeting stile',
+      'Infill': 'Rigid PUF / Honeycomb Core',
+      'Hardware': 'Door coordinator, panic bolt, stainless hinges',
+      'Interlock Option': 'Electromagnetic lock compatibility',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Designed for material airlocks, equipment transfer corridors, and large batch transfer zones. Accommodates wide pallet trolleys and production machinery while maintaining hermetic room pressure.',
+    features: [
+      'Wide clear opening designed for machinery movement and pallet trollies',
+      'Coordinated double door coordinator system with sequence selector',
+      'Flush rebated center meeting stile with airtight silicone gaskets',
+      'Compatible with access control, magnetic locks, and interlocking controllers'
+    ],
+    application: 'Equipment transfer airlocks, primary manufacturing corridors, and central clean store.'
+  },
+  {
+    id: 'emergency-exit-door',
+    name: 'Clean Room Emergency Exit Fire Door',
+    cat: 'Clean Room Doors',
+    spec: 'UL Listed Panic Push Bar • Fire Rated Core',
+    img: '/images/emergency-door.png',
+    icon: ShieldCheck,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Fire Rating': 'Up to 120 Minutes Fire Resistant',
+      'Hardware': 'UL Listed Heavy-Duty Panic Push Bar',
+      'Core': 'Ceramic Wool / Mineral Wool Core',
+      'Operation': 'Outward opening with automatic latching',
+      'Finish': 'Polished / Epoxy Powder Coated Cleanroom White',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Statutory emergency egress fire door designed to integrate seamlessly into modular cleanroom partition systems. Features perimeter intumescent seals that expand in heat to block smoke and toxic gases.',
+    features: [
+      'Heavy-duty panic push bar hardware conforming to ANSI/BHMA standards',
+      'Honeycomb or ceramic wool fire-resistant insulated core (up to 120 mins rating)',
+      'Positive latching mechanism with keyless outward emergency egress',
+      'Cleanroom smooth finish matching partition walls with perimeter intumescent seals'
+    ],
+    application: 'Statutory emergency exits in pharmaceutical facilities, hospital suites, and industrial cleanrooms.'
+  },
+
+  // ==========================================
+  // 4. CLEANROOM EQUIPMENT
+  // ==========================================
+  {
+    id: 'cleanroom-air-shower',
+    name: 'High-Velocity Personnel Air Shower',
+    cat: 'Cleanroom Equipment',
+    spec: '20–25 m/s Air Velocity • SS 304 Nozzles',
+    img: '/images/air-shower.png',
+    icon: Wind,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Air Velocity': '20 to 25 m/s (4,000+ FPM) at nozzle exit',
+      'Nozzles': '16 to 24 adjustable SS 304 rotational nozzles',
+      'Filtration': 'Pre-filter (10μ) + Mini-pleat HEPA H14 (99.997% @ 0.3μ)',
+      'Controller': 'PLC based with touch membrane and cycle timer (0-99s)',
+      'Door Interlock': 'Electromagnetic 12V DC interlocking system',
+      'Country of Origin': 'Made in India (Vadodara)'
+    },
+    description: 'Encore Air Showers deliver high-velocity filtered air jets to dislodge surface dust, lint, and loose particulates from personnel garments prior to entering ISO 5 / ISO 7 cleanroom suites.',
+    features: [
+      'Microprocessor PLC controller with automated electromagnetic door interlocking',
+      'Adjustable stainless steel 304 nozzles (16–24 nos.) delivering 20–25 m/s high-speed filtered air jets',
+      'Two-stage filtration: Pre-filter (10μ) and Mini-pleat HEPA filter (99.997% @ 0.3μ)',
+      'Emergency egress push button with optical infrared sensor activation'
+    ],
+    application: 'Personnel entry into ISO 5 / ISO 7 cleanrooms, microelectronics facilities, and research institutes.'
+  },
+  {
+    id: 'dynamic-pass-box',
+    name: 'Dynamic Pass Box (HEPA Filtered)',
+    cat: 'Cleanroom Equipment',
+    spec: 'Class 100 / ISO 5 Inside • SS 304 Construction',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2024/9/449379024/WB/KQ/ZP/43788119/dynamic-pass-box-500x500.jpg',
+    icon: ShieldCheck,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Chamber Class': 'ISO Class 5 (Class 100)',
+      'Material': 'Stainless Steel SS 304 (1.2mm thick) Hairline Finish',
+      'Filtration': 'H14 Mini-Pleat HEPA (99.997% @ 0.3μ) + G4 Pre-Filter',
+      'Pressure Gauge': 'Magnehelic Differential Pressure Gauge (0–50 mm wg)',
+      'Safety': 'Electromagnetic Interlocking + Germicidal UV Light',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Dynamic Pass Boxes provide filtered positive pressure air sweep during material transfers between classified and unclassified zones, preventing cross-contamination in pharmaceutical manufacturing.',
+    features: [
+      'Complete SS 304 construction with satin finish and coved internal corners for easy cleaning',
+      'Internal recirculation blower with mini-pleat HEPA filter (99.997% @ 0.3μ)',
+      'Electromagnetic door interlock prevents simultaneous opening of clean and dirty doors',
+      'Magnehelic differential pressure gauge, UV germicidal lamp, and fluorescent clean lighting'
+    ],
+    application: 'Aseptic material transfer between classified and non-classified areas in pharma plants.'
+  },
+  {
+    id: 'static-pass-box',
+    name: 'Static Clean Room Pass Box',
+    cat: 'Cleanroom Equipment',
+    spec: 'Electromagnetic / Mechanical Interlock • SS 304',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/357943343/DZ/CV/CJ/43788119/static-pass-box-500x500.jpeg',
+    icon: ShieldCheck,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Material': 'SS 304 / GI Powder Coated',
+      'Internal Dimensions': '450x450x450 mm, 600x600x600 mm, or Custom',
+      'Interlocking': 'Electromagnetic or Mechanical Interlock',
+      'Sterilization': 'Philips UV-C Germicidal Lamp with hour meter',
+      'Viewing Glass': 'Toughened double glass window on both doors',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Encore Static Pass Boxes facilitate safe material transfer between clean zones of equal classification without allowing atmospheric air infiltration or personnel transit.',
+    features: [
+      'Sturdy SS 304 internal chamber with double-walled flush viewing doors',
+      'Reliable mechanical or electromagnetic interlocking system',
+      'Integrated UV lamp with automated hour meter and safety door interlock',
+      'Available in customized internal chamber dimensions'
+    ],
+    application: 'Material transfer between equal classification clean zones to prevent cross-contamination.'
+  },
+  {
+    id: 'laminar-air-flow-laf',
+    name: 'Laminar Air Flow (LAF) Unit',
+    cat: 'Cleanroom Equipment',
+    spec: 'Horizontal / Vertical • Class 100 (ISO 5)',
+    img: '/images/pharma-lab.png',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Airflow Velocity': '0.45 m/s (90 FPM) ± 20%',
+      'HEPA Filter': 'H14 Mini-Pleat 99.997% efficient @ 0.3μ',
+      'Work Surface': 'Stainless Steel SS 304 Mirror / Satin Finish',
+      'Side Panels': 'Clear Acrylic / Toughened Glass Static-Dissipative',
+      'Blower': 'Dynamically balanced forward curved centrifugal fan',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Laminar Air Flow workstations provide an ultra-clean localized sterile field (ISO 5 / Class 100) bathed in continuous unidirectional filtered air, preventing airborne particle deposition during critical sampling.',
+    features: [
+      'Unidirectional laminar airflow with uniform velocity of 0.45 m/s (90 FPM) ± 20%',
+      'H14 mini-pleat HEPA filter with 99.997% efficiency at 0.3 microns',
+      'Dynamically balanced centrifugal blower with vibration isolation dampers',
+      'SS 304 perforated diffuser screen, acrylic side shields, and Magnehelic gauge'
+    ],
+    application: 'Sterile vial filling, microbiological culture transfer, and quality control sterility testing.'
+  },
+  {
+    id: 'sampling-dispensing-booth',
+    name: 'Reverse Laminar Airflow (RLAF) Dispensing Booth',
+    cat: 'Cleanroom Equipment',
+    spec: 'Operator & Product Protection • ISO Class 5',
+    img: '/images/hero-corridor.png',
+    icon: ShieldCheck,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Containment Level': 'Occupational Exposure Limit (OEL) < 1 μg/m³',
+      'Filtration Stages': '3 Stages: 10μ Pre + 5μ Microvee + 0.3μ Terminal HEPA',
+      'Air Pattern': 'Downward reverse laminar sweep with 10% bleed exhaust',
+      'Construction': 'Complete Stainless Steel SS 304 / SS 316L',
+      'Test Ports': 'Integrated PAO / DOP aerosol test challenge ports',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'RLAF Sampling and Dispensing Booths protect operators from inhaling active powders and pharmaceutical APIs while preventing powder clouds from escaping into the surrounding facility.',
+    features: [
+      'Downflow air pattern creating a safe negative pressure barrier for operator containment',
+      'Three-stage filtration system: Pre-filter, Intermediate EU7 filter, and Terminal HEPA EU14',
+      'Prevents powder drift, cross-contamination, and protects operators from inhalation',
+      'PAO / DOP test ports, Magnehelic gauges for all 3 filter stages, and explosion-proof fittings available'
+    ],
+    application: 'Raw material dispensing, active pharmaceutical ingredient (API) sampling, and powder weighing.'
+  },
+  {
+    id: 'return-air-riser',
+    name: 'Clean Room Return Air Riser (RAR)',
+    cat: 'Cleanroom Equipment',
+    spec: 'GI Powder Coated / SS 304 • Removable Filter Grill',
+    img: '/images/cleanroom-corridor.png',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Material': 'Galvanised Iron (GI 1.0mm) Powder Coated or SS 304',
+      'Filter Cassette': 'Removable G4 Pre-Filter (10 Micron Washable)',
+      'Damper': 'Integrated Volume Control Damper (VCD)',
+      'Front Grill': 'Perforated front grill with toolless thumb screws',
+      'Dimensions': 'Fabricated to room height & CFM requirements',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Mounted at floor level inside cleanrooms to extract air continuously downwards, removing dust particles and directing air back into the return ducting while balancing room pressure gradients.',
+    features: [
+      'Low-level air extraction designed for continuous laminar and turbulent air sweep',
+      'Perforated front grill with quick-release toolless fasteners for easy filter servicing',
+      'Integral EU4 / G4 pre-filter cassette to trap large dust particles before ductwork',
+      'Integrated volume control damper (VCD) for precise room pressure balancing'
+    ],
+    application: 'Maintaining controlled air currents and room pressure gradients across all cleanroom classes.'
+  },
+
+  // ==========================================
+  // 5. COOLING COILS & AIR WASHERS
+  // ==========================================
+  {
+    id: 'ahu-cooling-coil',
+    name: 'AHU Cooling Coil & Evaporator Coil',
+    cat: 'Cooling Coils & Air Washers',
+    spec: 'Copper Tubes · Aluminium Blue Fins · DX / Chilled Water',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/361811243/CO/YB/RW/43788119/ahu-cooling-coil-500x500.jpg',
+    icon: Snowflake,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Tube Diameter': '3/8", 1/2", 5/8" OD Seamless Copper Tubes',
+      'Fin Material': 'Corrosion-Resistant Hydrophilic Blue Aluminium Fins',
+      'Fin Spacing': '8 to 14 Fins Per Inch (FPI)',
+      'Medium': 'Direct Expansion (DX Refrigerant) or Chilled Water',
+      'Testing Pressure': 'Pneumatic test at 350 PSI under water',
+      'Header Material': 'Heavy Duty Copper / Carbon Steel Headers',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'High-performance cooling coils engineered for air handling units. Fabricated with staggered seamless copper tubes mechanically expanded into corrugated aluminium fins for optimal heat transfer efficiency.',
+    features: [
+      'Mechanically expanded copper tubes for 100% metal-to-metal thermal contact',
+      'Hydrophilic coated fins reduce condensate water bridging and lower air resistance',
+      'Heavy gauge galvanized steel or SS 304 casing with slotted tube sheets',
+      'Tested under water at 350 PSI to guarantee leak-free performance'
+    ],
+    application: 'Air handling units, dehumidification units, process cooling, and rooftop air conditioners.'
+  },
+  {
+    id: 'double-skin-air-washer',
+    name: 'Double Skin Air Washer Unit',
+    cat: 'Cooling Coils & Air Washers',
+    spec: '2,000 to 60,000 CFM • SS 304 Water Tank',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2024/9/452068753/WF/EQ/IZ/43788119/air-washer-unit-500x500.jpg',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Airflow': '2,000 to 60,000 CFM',
+      'Outer Casing': 'Double Skin 25mm/50mm PUF Insulated Panels',
+      'Water Tank': 'Stainless Steel SS 304 (2.0mm) continuously welded',
+      'Cooling Media': 'High-Efficiency Celdek Evaporative Cooling Pads',
+      'Pump': 'Centrifugal monoblock water circulation pump',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Encore Double Skin Air Washers utilize evaporative cooling principles combined with mist eliminators to provide high-volume cooling, humidification, and dust cleansing for heavy industrial plants.',
+    features: [
+      'Cellulose evaporative cooling pads (CELdek) with 90%+ saturation efficiency',
+      'Heavy-duty stainless steel (SS 304) bottom water sump with overflow & drain',
+      'Centrifugal pump with brass spray piping and mist eliminator blades',
+      'Double skin PUF insulated outer casing with powder-coated finish'
+    ],
+    application: 'Textile mills, plastic processing plants, chemical facilities, and industrial shop floors requiring high air exchange.'
+  },
+  {
+    id: 'single-skin-air-washer',
+    name: 'Single Skin Air Washer Unit',
+    cat: 'Cooling Coils & Air Washers',
+    spec: '1,000 to 30,000 CFM • Industrial Evaporative Cooling',
+    img: 'https://5.imimg.com/data5/SELLER/PDFImage/2024/10/456642402/FO/YA/OB/43788119/single-skin-air-washer-500x500.png',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '1,000 to 30,000 CFM',
+      'Casing': 'Single Skin Galvanised Iron (GI 1.6mm)',
+      'Water Sump': 'Mild Steel FRP Lined / SS 304 Tank',
+      'Blower': 'Belt-driven DIDW forward curved blower',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Cost-effective evaporative air cooling and dust scrubbing system designed for industrial shop floors, packaging areas, and assembly halls requiring fresh air ventilation with cooling effect.',
+    features: [
+      'Robust single-skin sheet metal casing with anti-corrosive industrial epoxy finish',
+      'Aerodynamically profiled PVC mist eliminators to prevent water droplet carryover',
+      'Heavy-duty water distribution header with non-clogging nylon spray nozzles',
+      'High-velocity blower with low electrical power consumption'
+    ],
+    application: 'Foundries, automotive component factories, warehouses, and plastic injection plants.'
+  },
+  {
+    id: 'air-cooling-unit',
+    name: 'Industrial Air Cooling Unit',
+    cat: 'Cooling Coils & Air Washers',
+    spec: 'Galvanised Steel · Three Phase · Automatic',
+    img: 'https://5.imimg.com/data5/SELLER/Default/2023/11/362208158/LS/NZ/VZ/43788119/air-cooling-unit-500x500.jpg',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Voltage': '415 V / 3 Phase / 50 Hz',
+      'Control': 'Automatic electrical control panel',
+      'Blower Static': '30mm to 75mm wg external static pressure',
+      'Filtration': 'Multi-stage washable nylon mesh filters',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'All-weather factory cooling unit providing positive pressure ventilation and evaporative cooling. Equipped with an automatic water level controller and dry-run pump safety switch.',
+    features: [
+      'Galvanised steel frame with heavy powder coat protective layer',
+      'Automatic water top-up float valve and auto drain feature',
+      'Three-phase heavy duty electric motor with IP55 protection',
+      'Supplied complete with vibration isolator dampers'
+    ],
+    application: 'Commercial kitchens, assembly lines, generator rooms, and fabrication units.'
+  },
+
+  // ==========================================
+  // 6. INDUSTRIAL CHILLERS & VRV
+  // ==========================================
+  {
+    id: 'water-cooled-screw-chiller',
+    name: 'Water Cooled Screw Chiller',
+    cat: 'Industrial Chillers & VRV',
+    spec: '50 to 500 TR • Semi-Hermetic Twin Screw',
+    img: '/images/water-cooled-screw-chiller.png',
+    icon: Snowflake,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Cooling Capacity': '50 TR to 500 TR',
+      'Compressor': 'Semi-Hermetic Twin-Screw with stepless slide valve (25-100%)',
+      'Condenser': 'Shell and Tube cleanable type with copper tubes',
+      'Evaporator': 'Direct Expansion / Flooded Shell & Tube',
+      'Refrigerant': 'R134a / R513A Eco-Friendly Low GWP',
+      'COP': '5.0 to 6.2 high coefficient of performance',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Industrial grade water-cooled screw chillers engineered for 24/7 continuous duty in bulk drug chemical plants, plastic molding, and central air conditioning. Equipped with PLC microprocessor and BMS communication.',
+    features: [
+      'Twin-screw semi-hermetic compressor with stepless capacity control (25%–100%)',
+      'Shell and tube flooded evaporator and cleanable shell and tube condenser',
+      'Eco-friendly low-GWP refrigerants: R134a / R513A / R1234ze',
+      'Advanced microprocessor PLC controller with BMS (BACnet / Modbus) connectivity'
+    ],
+    application: 'Continuous 24x7 process cooling for bulk drug synthesis, chemical reactors, plastics, and central HVAC.'
+  },
+  {
+    id: 'air-cooled-screw-chiller',
+    name: 'Air Cooled Screw Chiller',
+    cat: 'Industrial Chillers & VRV',
+    spec: '30 to 450 TR • No Cooling Tower Required',
+    img: '/images/air-cooled-screw-chiller.png',
+    icon: Snowflake,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '30 TR to 450 TR',
+      'Cooling Tower': 'Zero water requirement (No cooling tower needed)',
+      'Condenser Coil': 'V-Bank Copper Tube with Hydrophilic Aluminium Fins',
+      'Fans': 'Low-noise aerofoil sickle-blade axial fans with VFD',
+      'Circuits': 'Dual independent refrigeration circuits for redundancy',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Designed for locations with water scarcity. Eliminates the cost, chemical treatment, and Legionella risk of cooling towers while delivering robust, energy-efficient refrigeration.',
+    features: [
+      'High-efficiency V-bank copper tube / aluminium fin or microchannel condensers',
+      'Low noise aerofoil axial condenser fans with variable speed drives',
+      'Ideal for water-scarce regions with zero cooling tower water treatment overhead',
+      'Dual independent refrigeration circuits for built-in standby redundancy'
+    ],
+    application: 'Pharma packaging, beverage processing, hospitals, and industrial cooling where water is scarce.'
+  },
+  {
+    id: 'water-cooled-scroll-chiller',
+    name: 'Water Cooled Scroll Chiller',
+    cat: 'Industrial Chillers & VRV',
+    spec: '10 to 120 TR • Tandem / Trio Scroll Compressors',
+    img: '/images/water-cooled-scroll-chiller.png',
+    icon: Snowflake,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '10 TR to 120 TR',
+      'Compressors': 'Tandem / Trio Hermetic Scroll Compressors',
+      'Heat Exchanger': 'Brazed Plate SS 316 or Shell & Tube',
+      'Refrigerant': 'R410A / R407C',
+      'Sound Level': '<65 dBA ultra-quiet indoor operation',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Compact, energy-efficient process chillers utilizing multi-scroll staging to track fluctuating partial cooling loads with high efficiency and minimal electricity usage.',
+    features: [
+      'Hermetic scroll compressors with high part-load efficiency (IPLV)',
+      'Brazed plate or shell-and-tube heat exchangers with compact footprint',
+      'Staged capacity stepping for exceptional low-load energy conservation',
+      'Built-in safety diagnostics for high/low pressure, freeze prevention, and phase reversal'
+    ],
+    application: 'Laboratories, injection molding plants, laser cutting machines, and localized process cooling.'
+  },
+  {
+    id: 'air-cooled-scroll-chiller',
+    name: 'Air Cooled Scroll Chiller',
+    cat: 'Industrial Chillers & VRV',
+    spec: '5 to 90 TR • Plug-and-Play Outdoor Package',
+    img: '/images/air-cooled-scroll-chiller.png',
+    icon: Snowflake,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '5 TR to 90 TR',
+      'Type': 'Outdoor Packaged Air-Cooled Scroll',
+      'Hydronic Module': 'Integrated buffer tank and circulating pump option',
+      'Power Supply': '415 V / 3 Phase / 50 Hz',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Factory-tested, pre-charged plug-and-play outdoor chiller package. Rapid rooftop installation with zero plant room footprint required.',
+    features: [
+      'Factory charged, tested, and pre-wired package for rapid rooftop commissioning',
+      'Hydrophilic coated condenser fins resistant to corrosive industrial atmospheres',
+      'Integrated hydronic pump module option with expansion vessel and buffer tank',
+      'Low acoustic signature suitable for noise-sensitive institutional boundaries'
+    ],
+    application: 'Commercial complexes, healthcare diagnostic wings, and pilot manufacturing plants.'
+  },
+  {
+    id: 'water-cooled-centrifugal-chiller',
+    name: 'Centrifugal Water Chiller',
+    cat: 'Industrial Chillers & VRV',
+    spec: '250 to 1,500 TR • Mega Capacity Central Plant',
+    img: '/images/water-cooled-centrifugal-chiller.png',
+    icon: Snowflake,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '250 TR to 1,500 TR',
+      'Compressor': 'Two-Stage Centrifugal / Magnetic Bearing Oil-Free',
+      'COP': 'Up to 7.0+ COP (World-class energy efficiency)',
+      'VFD': 'Integrated Variable Frequency Drive for part-load optimization',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'High-tonnage central chilled water cooling plants designed for massive pharmaceutical campuses, medical universities, and large commercial facilities.',
+    features: [
+      'Two-stage aerodynamic centrifugal compressor with high isentropic efficiency',
+      'Magnetic bearing oil-free technology option for peak energy performance (COP > 7.0)',
+      'Variable Frequency Drive (VFD) for precision speed modulation',
+      'Substantial lifecycle energy savings for massive district and industrial cooling loads'
+    ],
+    application: 'Large pharma campuses, heavy industrial estates, multi-specialty hospitals, and tech parks.'
+  },
+  {
+    id: 'daikin-vrv-vrf-system',
+    name: 'Daikin VRV / VRF Inverter System',
+    cat: 'Industrial Chillers & VRV',
+    spec: 'Authorized Channel Partner • Inverter Multi-Split',
+    img: '/images/vrv-system.png',
+    icon: Snowflake,
+    popular: true,
+    tableSpecs: {
+      'Authorized Partner': 'Encore is an Authorized Daikin Channel Partner',
+      'Technology': 'Variable Refrigerant Volume (VRV / VRF)',
+      'Indoor Units': 'Connect up to 64 indoor cassettes / ducted units',
+      'Piping Length': 'Up to 1,000 meters total equivalent piping',
+      'Efficiency': 'Top-tier seasonal energy efficiency ratio (ISEER)',
+      'Warranty': 'Official Daikin OEM Manufacturer Warranty'
+    },
+    description: 'As an Authorized Daikin Channel Partner, Encore Cooling Systems designs, supplies, and commissions genuine Daikin VRV inverter systems for precision multi-zone comfort and process temperature control.',
+    features: [
+      'Encore is an Authorized Channel Partner for Daikin Air Conditioning India',
+      'Variable Refrigerant Volume (VRV) adjusting refrigerant volume dynamically to match zone loads',
+      'Modular outdoor units supporting up to 64 indoor units (cassette, ductable, wall mount)',
+      'Long piping capability up to 1000m total equivalent length',
+      'Independent temperature control in each office, lab, or clean zone with smart central controller'
+    ],
+    application: 'Pharma admin blocks, QA/QC laboratories, cleanroom corridors, and hospital wards.'
+  },
+  {
+    id: 'packaged-unit-ac',
+    name: 'Packaged Air Conditioning Unit',
+    cat: 'Industrial Chillers & VRV',
+    spec: '5.5 to 25 TR • All-In-One Climate Package',
+    img: '/images/package-unit.png',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '5.5 TR to 25 TR',
+      'Type': 'Air Cooled / Water Cooled Packaged Unit',
+      'Installation': 'Single cabinet self-contained package',
+      'Compressor': 'High-Efficiency Hermetic Scroll',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Self-contained commercial air conditioning package combining evaporator, compressor, condenser, and blower in a single pre-tested cabinet for rapid deployment.',
+    features: [
+      'Self-contained single unit requiring only ductwork and power connection',
+      'Acoustically insulated blower compartment with forward curved fan',
+      'Pre-piped, factory charged, and run-tested before delivery',
+      'Low installation cost and minimal on-site piping requirements'
+    ],
+    application: 'Control rooms, switchgear rooms, laboratories, and commercial complexes.'
+  },
+  {
+    id: 'rooftop-ducted-ac',
+    name: 'Roof-Top Ducted AC Unit',
+    cat: 'Industrial Chillers & VRV',
+    spec: '8.5 to 30 TR • Weatherproof Rooftop Package',
+    img: '/images/rooftop-ducted-ac.png',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Capacity': '8.5 TR to 30 TR',
+      'Casing': 'Heavy gauge weatherproof galvanized steel with powder coat',
+      'Airflow': '3,000 to 12,000 CFM',
+      'Static Pressure': 'High external static up to 50mm wg',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Weatherproof rooftop air conditioning units that free up valuable interior floor space while delivering high-volume conditioned air directly through ceiling ducts.',
+    features: [
+      'Weather-resistant outdoor construction with sloped roof to prevent water accumulation',
+      'High-static blower pushing air through extensive multi-branch duct layouts',
+      'Economizer damper option for free-cooling using outdoor fresh air in winter',
+      'Side or down-discharge air duct configurations'
+    ],
+    application: 'Industrial assembly shops, packaging halls, shopping centers, and auditoriums.'
+  },
+
+  // ==========================================
+  // 7. MODULAR OPERATION THEATER
+  // ==========================================
+  {
+    id: 'modular-operation-theatre',
+    name: 'Complete Modular Operation Theatre (OT) Suite',
+    cat: 'Modular Operation Theater',
+    spec: 'NABH / HTM 03-01 Compliant • Antimicrobial Seamless',
+    img: '/images/operation-theatre.png',
+    icon: HeartPulse,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Compliance': 'NABH, HTM 03-01, DIN 1946-4',
+      'Wall System': 'Antimicrobial Powder-Coated SS 304 / Solid HPL Panels',
+      'Ceiling': 'Laminar Airflow (LAF) Ceiling Plenum with Silk Diffuser',
+      'Flooring': '2mm Conductive Vinyl with Anti-Static Earthing Grid',
+      'Radiation': 'Lead Shielding (1mm–2mm Pb) option for Ortho/Neuro',
+      'Doors': 'Hermetically Sealed Motorized Sliding Doors',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Complete turnkey modular surgical suites designed for super-specialty surgery. Engineered with smooth anti-microbial wall paneling, ceiling laminar airflow, surgical pendant integration, and positive pressure cascades.',
+    features: [
+      'Antimicrobial powder-coated SS 304 or anti-static HPL wall & ceiling panelling',
+      'Central laminar airflow ceiling system with mini-pleat HEPA filters and sterile screen',
+      'Radiation protection lead-shielding (1mm to 2mm Pb equivalent) for Ortho & Neuro suites',
+      'Hermetically sealed motorized sliding doors with contactless foot/hand sensors',
+      'Seamless conductive vinyl flooring with anti-static earthing grid'
+    ],
+    application: 'Super-specialty cardiac, ortho, neuro, and general surgery suites in multi-specialty hospitals.'
+  },
+  {
+    id: 'surgeon-control-panel',
+    name: 'Digital Surgeon Control Panel',
+    cat: 'Modular Operation Theater',
+    spec: 'Microprocessor Touch Screen • Integrated Medical Alarms',
+    img: '/images/hospital-cleanroom.png',
+    icon: Activity,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Display': 'TFT Touch Screen / Membrane Touch Switch Panel',
+      'Parameters': 'Temp (°C), Relative Humidity (% RH), Differential Pressure (Pa)',
+      'Clocks': 'Real-time clock + Stop clock / Surgery timer with remote sensor',
+      'Gas Alarms': 'Audio-Visual medical gas alarms (O2, N2O, Air 4, Air 7, Vac)',
+      'Controls': 'Peripheral lighting dimmers, viewing box controls, intercom',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Central microprocessor-driven control panel mounted flush in the OT wall, providing the surgical team with real-time room environmental monitoring, surgical timing, and medical gas alarms.',
+    features: [
+      'Integrated display showing OT Temperature, Relative Humidity, and Room Differential Pressure',
+      'Real-time surgical elapsed time clock and standard 24-hour time-of-day clock',
+      'Medical gas status alarms (Oxygen, Nitrous Oxide, Vacuum, Medical Air 4 & 7 bar)',
+      'Dimming controls for peripheral cleanroom lighting and surgical viewing box controls',
+      'Hands-free telephone communication interface with hospital intercom system'
+    ],
+    application: 'Modular surgical suites, endoscopy procedure rooms, and intensive care units.'
+  },
+  {
+    id: 'ot-laminar-air-ceiling',
+    name: 'OT Laminar Airflow Ceiling Plenum',
+    cat: 'Modular Operation Theater',
+    spec: 'Class 100 Sterile Zone • Silk Screen Diffuser',
+    img: '/images/operation-theatre.png',
+    icon: Wind,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Sterility Class': 'Class 100 (ISO 5) above surgical table',
+      'Plenum Box': 'SS 304 continuous welded zero-leak construction',
+      'Filtration': 'Terminal H14 Mini-Pleat HEPA (99.997% @ 0.3μ)',
+      'Diffuser Screen': 'Monofilament polyester silk distribution screen',
+      'Pendant Integration': 'Central structural provisions for surgical lights & pendant arms',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Laminar airflow ceiling plenums engineered to deliver uniform, downward piston airflow directly over the surgical table, creating an ultra-sterile barrier that protects the patient incision from airborne surgical site infections (SSI).',
+    features: [
+      'Plenum box fabricated from continuous welded SS 304 sheet for zero leak integrity',
+      'Terminal H14 HEPA filters (99.997% @ 0.3μ) providing unidirectional downward piston airflow',
+      'Uniform monofilament polyester silk distribution screen to prevent turbulent air entrainment',
+      'Central provisions for surgical pendant and ceiling light arm anchoring'
+    ],
+    application: 'Surgical field infection control in cardiac, transplant, and orthopedic operating rooms.'
+  },
+
+  // ==========================================
+  // 8. LABORATORY FURNITURE & HOODS
+  // ==========================================
+  {
+    id: 'modular-lab-furniture',
+    name: 'Modular Laboratory Furniture & Workbenches',
+    cat: 'Laboratory Furniture & Hoods',
+    spec: 'C-Frame / Plinth Mounted • Granite / Epoxy Worktop',
+    img: 'https://5.imimg.com/data5/SELLER/PDFImage/2024/10/456641530/XI/RZ/EF/43788119/modular-laboratory-furniture-500x500.png',
+    icon: FlaskConical,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Frame Type': 'Heavy Duty C-Frame / Cantilever Frame (16 Gauge Steel)',
+      'Worktop': '18mm Jet Black Chemical-Resistant Granite / Solid Epoxy Resin',
+      'Powder Coating': 'Pure Epoxy Powder Coat (70-80 microns) chemical resistant',
+      'Fittings': 'Water taps, gas valves, PP cup sinks, electrical raceways',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Heavy-duty modular laboratory workbenches manufactured from cold-rolled steel and treated with pure chemical-resistant epoxy coatings. Built to withstand corrosive chemical spills, heavy analytical instruments, and continuous lab use.',
+    features: [
+      'Heavy-duty 16-gauge cold rolled steel C-frame or cantilever frame structure',
+      'Pure epoxy powder coated finish (70–80 microns) with high resistance to chemical spills',
+      '18mm / 19mm black jet chemical-resistant granite or solid epoxy resin worktops',
+      'Soft-close telescopic drawer runners, chemical grade PP sinks, and three-way laboratory faucets'
+    ],
+    application: 'Pharmaceutical QC labs, analytical testing laboratories, biotechnology research, and educational centers.'
+  },
+  {
+    id: 'laboratory-fume-hood',
+    name: 'Industrial Aerodynamic Laboratory Fume Hood',
+    cat: 'Laboratory Furniture & Hoods',
+    spec: 'Constant / Variable Volume • Chemical Resistant Liner',
+    img: '/images/pharma-lab.png',
+    icon: FlaskConical,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Airfoil': 'Aerodynamic stainless steel bypass airfoil',
+      'Inner Liner': 'Solid phenolic resin / Polypropylene (PP) liner',
+      'Sash': 'Counterbalanced 6mm toughened safety glass with SS wire rope',
+      'Blower': 'Chemical-resistant PP/FRP centrifugal exhaust blower',
+      'Face Velocity': '0.5 m/s (100 FPM) constant velocity',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Aerodynamic laboratory exhaust fume hood designed to capture, contain, and exhaust hazardous chemical fumes, solvent vapors, and volatile compounds away from laboratory technicians.',
+    features: [
+      'Aerodynamic bypass airfoil design to prevent hazardous vapor roll-back and vortex formation',
+      'Chemical-resistant liner: Solid phenolic resin or polypropylene interior',
+      'Counterbalanced toughened glass sash with smooth stainless steel wire rope suspension',
+      'Integrated service fixtures: Water tap, Nitrogen / Vacuum gas valves, and explosion-proof electrical sockets',
+      'PP/FRP high-efficiency chemical exhaust blower with flameproof motor'
+    ],
+    application: 'Chemical synthesis labs, QC/QA analytical testing, solvent evaporation, and university research.'
+  },
+  {
+    id: 'biosafety-cabinet',
+    name: 'Class II Type A2 / B2 Biosafety Cabinet',
+    cat: 'Laboratory Furniture & Hoods',
+    spec: 'EN 12469 / NSF 49 Certified • 70% Recirc / 30% Exhaust',
+    img: '/images/hospital-cleanroom.png',
+    icon: ShieldCheck,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Standard': 'EN 12469 / NSF 49 Certified',
+      'Protection': 'Personnel, Environment, and Product Protection',
+      'Filtration': 'Dual HEPA H14 (99.997% @ 0.3μ for supply & exhaust)',
+      'Work Zone': 'Stainless Steel SS 304 seamless coved chamber',
+      'Control': 'Microprocessor digital airflow velocity readout & alarms',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'Class II Biosafety Cabinets for microbiology and virology research. Features laminar downward airflow with HEPA exhaust filtration to protect laboratory staff, biological samples, and the room environment.',
+    features: [
+      'Certified Class II protection for personnel, environment, and biological products',
+      'Dual HEPA filters: 99.997% efficient at 0.3μ for supply and exhaust airflow',
+      'Microprocessor controller with digital airflow velocity sensor and audio-visual alarms',
+      'Motorized sash with anti-UV safety interlock and programmable UV decontamination timer'
+    ],
+    application: 'Microbiology laboratories, pathology departments, virology handling, and cell culture facilities.'
+  },
+
+  // ==========================================
+  // 9. TURNKEY HVAC SERVICES
+  // ==========================================
+  {
+    id: 'turnkey-hvac-cleanroom-project',
+    name: 'Turnkey HVAC & Cleanroom Project',
+    cat: 'Turnkey HVAC Services',
+    spec: 'Concept to Commissioning • DQ/IQ/OQ Validation',
+    img: '/images/hero-corridor.png',
+    icon: Wrench,
+    popular: true,
+    tableSpecs: {
+      'Brand': 'Encore Cooling Systems',
+      'Scope': 'Design, Sizing, In-House Mfg, Erection, Commissioning',
+      'Standards': 'WHO cGMP, USFDA Schedule M, ISO 14644-1',
+      'Validation': 'Complete DQ, IQ, OQ Validation Dossiers Provided',
+      'Testing': 'On-site Aerosol PAO/DOP HEPA leak testing, particle counts',
+      'Execution': 'Experienced Vadodara Project Engineers',
+      'Country of Origin': 'Made in India'
+    },
+    description: 'End-to-end turnkey contracting covering cleanroom partitions, walk-on ceilings, doors, double-skin AHUs, ductwork, chilled water piping, control panels, and regulatory validation.',
+    features: [
+      'Comprehensive heat-load audit and psychrometric analysis',
+      'In-house manufacturing of AHUs, PUF panels, and cleanroom doors in Vadodara',
+      'Precision on-site ducting, piping, and electrical installation',
+      'Complete validation dossier (DQ/IQ/OQ) with certified aerosol DOP testing'
+    ],
+    application: 'Pharmaceutical formulation plants, medical device manufacturing, API units, and hospital OT suites.'
+  },
+  {
+    id: 'ahu-service-repair',
+    name: 'AHU Service, Repair & AMC Support',
+    cat: 'Turnkey HVAC Services',
+    spec: 'Maintenance · Retubing · Filter Replacement',
+    img: '/images/cleanroom-corridor.png',
+    icon: Wrench,
+    tableSpecs: {
+      'Service Provider': 'Encore Cooling Systems Service Wing',
+      'Coverage': 'AHU fans, motors, bearings, coils, and dampers',
+      'Filter Replacement': 'G4 Pre-filters, F9 Microvee, and H14 HEPA filters',
+      'Coil Work': 'Copper cooling coil retubing, leak repair, and descaling',
+      'Balancing': 'Airflow CFM measurement and room pressure re-balancing',
+      'Contract Type': 'Annual Maintenance Contract (AMC) or Breakdown Support'
+    },
+    description: 'Expert HVAC maintenance and refurbishment service. We provide cooling coil retubing, filter integrity testing, motor overhaul, fan dynamic balancing, and air velocity profiling.',
+    features: [
+      'Routine preventive maintenance and 24/7 emergency breakdown support',
+      'Cooling coil retubing, fin repair, and chemical descaling',
+      'Certified replacement of primary, secondary, and terminal HEPA filters',
+      'Airflow CFM rebalancing and room differential pressure tuning'
+    ],
+    application: 'Existing pharmaceutical, commercial, and industrial HVAC plants across Gujarat and Western India.'
+  }
+]
+
+export const clientList = [
+  { name: 'ALEMBIC PHARMACEUTICALS', location: 'Vadodara' },
+  { name: 'MEGHMANI ORGANICS', location: 'Dahej / Ahmedabad' },
+  { name: 'RUBAMIN LTD', location: 'Vadodara' },
+  { name: 'AARTI INDUSTRIES', location: 'Vapi / Jhagadia' },
+  { name: 'OTSUKA PHARMACEUTICAL', location: 'Ahmedabad' },
+  { name: 'WOCKHARDT LTD', location: 'Ankleshwar / Aurangabad' },
+  { name: 'PHARMANZA HERBAL', location: 'Anand' },
+  { name: 'EXEMED PHARMACEUTICALS', location: 'Vapi' },
+  { name: 'DSM-FIRMENICH', location: 'Vadodara' },
+  { name: 'MENDAS PHARMA', location: 'Gujarat' },
+  { name: 'ATLANTIC FINCHEM', location: 'Dahej' },
+  { name: 'APEX HEALTHCARE', location: 'Vadodara' },
+  { name: 'TIME TECHNOPLAST', location: 'Silvassa / Daman' },
+  { name: 'DDEV PLASTIKS', location: 'Daman' },
+  { name: 'MOHINI HEALTH & HYGIENE', location: 'Indore' },
+  { name: 'GD WALDNER', location: 'Pune' }
+]
+
+export const complianceStandards = [
+  {
+    code: 'WHO cGMP',
+    title: 'World Health Organization GMP',
+    desc: 'Facility design, pressure cascades, and contamination mitigation meeting international pharmaceutical manufacturing codes.'
+  },
+  {
+    code: 'USFDA Schedule M',
+    title: 'USFDA & Indian Schedule M',
+    desc: 'Sterile drug manufacturing guidelines, airborne particulate cleanliness (ISO 14644-1), and HEPA integrity testing.'
+  },
+  {
+    code: 'ISO 9001:2015',
+    title: 'Quality Management System',
+    desc: 'In-house manufacturing excellence, factory testing protocols, and rigorous pre-commissioning documentation.'
+  },
+  {
+    code: 'NABH / HTM 03-01',
+    title: 'Healthcare & Hospital Standards',
+    desc: 'Operation theatre ultra-clean ventilation, positive pressure control, and infection prevention standards.'
+  },
+  {
+    code: 'Daikin Authorized Partner',
+    title: 'Daikin India Certified Partner',
+    desc: 'Official channel partner supplying genuine Daikin VRV/VRF and industrial DX cooling technology with OEM warranty.'
+  }
+]
